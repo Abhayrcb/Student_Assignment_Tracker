@@ -6,12 +6,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body and Layout */
-body, html {
-  height: 100%;
-  background-color: #0d0d0d;
-  color: white;
-}
+
 
 .dashboard-container {
   min-height: 100vh;
@@ -45,8 +40,8 @@ nav {
   margin-bottom: 2rem;
 }
 
-nav a,
-nav button {
+nav a
+{
   padding: 0.6rem 1.2rem;
   background-color: #1f1f1f;
   color: white;
@@ -55,7 +50,8 @@ nav button {
   border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s;
+  transition:Background  0.3s;
+  background-color: red;
 }
 
 nav a:hover,

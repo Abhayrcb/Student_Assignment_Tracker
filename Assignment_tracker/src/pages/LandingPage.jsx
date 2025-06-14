@@ -1,20 +1,15 @@
 import React from 'react'
-import '../stylesheets/LandinPage.css';
+import '../stylesheets/LandingPage.css'
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 function LandingPage() {
   return (
     <>
      <div className="dashboard-container">
         <header>
+            <Navbar/>
             <h1>Student Assignment Tracker</h1>
-            <nav>
-                <Link to="#">Landing Page</Link>
-                <Link to="#">Profile Page</Link>
-                <Link to="#">Dashboard</Link>
-                <Link to="/signup">Register</Link>
-                <Link to="/signin">Register</Link>
-            </nav>
         </header>
 
         <main>
@@ -22,21 +17,21 @@ function LandingPage() {
                 <h2>Welcome, Student 👋</h2>
                 <p class="description">Keep track of your assignments, monitor your progress, and stay productive!</p>
 
-                <section class="cards">
-                    <div class="card">
+                <section className="cards">
+                    <div className="card">
                         <h3>New Assignment</h3>
                         <p>Create and manage your tasks efficiently.</p>
                     </div>
-                    <div class="card">
+                    <div className="card">
                         <h3>View Progress</h3>
                         <p>Analyze your weekly or monthly progress.</p>
                     </div>
-                    <div class="card">
+                    <div className="card">
                         <h3>Update Profile</h3>
                         <p>Manage your student details and preferences.</p>
                     </div>
                 </section>
-                <div class="summary">
+                <div className="summary">
                     <h2>About This App</h2>
                     <p>
                         <strong>Student Assignment Tracker</strong> is a web-based tool designed to help students manage
