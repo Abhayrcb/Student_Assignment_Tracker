@@ -3,7 +3,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import '../stylesheets/SignupPage.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../services/firebase'; // Adjust the path as per your project structure
-import { addDoc, collection } from 'firebase/firestore';
+import {  setDoc, doc } from 'firebase/firestore';
 ;
 
 function SignupPage() {
@@ -19,13 +19,17 @@ function SignupPage() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       // Store additional info in Firestore
-      await addDoc(collection(db, "users"), {
-        uid: userCredential.user.uid,
-        name,
-        email,
-        role,
+      const user = userCredential.user;
+      await setDoc(doc(db, "users", user.uid), {
+        uid: user.uid,
+        name:name,
+        email:user.email,
+        role:role
+
       });
+      
       navigate('/login');
+    
     } catch (error) {
       alert(error.message);
     }

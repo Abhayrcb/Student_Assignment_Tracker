@@ -1,0 +1,48 @@
+/* Sticky Header */
+.header {
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a,
+.nav button {
+  padding: 0.6rem 1.2rem;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav button {
+  background-color: white;
+  color: black;
+}
+
+.nav a:hover,
+.nav button:hover {
+  background-color: #333;
+}

@@ -13,6 +13,7 @@ import SubmissionPage from './pages/SubmissionPage';
 
 
 
+
 function App() {
   
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/' element={<LandingPage/>}/>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            
             <Route path="/c-assignment" element={<CreateAssignment />} />
             <Route path="/t-dashboard" element={<TeacherDashboard />} />
             <Route path="/s-dashboard" element={<StudentDashboard />} />

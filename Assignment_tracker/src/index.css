@@ -1,6 +1,4 @@
-/* Body and Layout */
-body, html {
-  height: 100%;
-  background-color: #0d0d0d;
-  color: white;
+*{
+    margin: 0;
+    padding: 0;
 }

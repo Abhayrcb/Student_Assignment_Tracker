@@ -3,7 +3,7 @@ import React from 'react'
 function StudentDashboard() {
   return (
     <div>
-        <h1>StudentDashboard</h1>
+        <h1>Student Dashborad</h1>
     </div>
   )
 }
