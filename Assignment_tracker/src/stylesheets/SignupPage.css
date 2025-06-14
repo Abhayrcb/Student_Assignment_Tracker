@@ -1,0 +1,102 @@
+/* Reset & Base Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Box */
+.signup-container {
+  background-color: #111;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+/* Heading */
+.signup-container h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* Form inputs */
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+form input::placeholder {
+  color: #999;
+}
+
+/* Select dropdown styling */
+form select {
+  appearance: none;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #fff;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ddd;
+}
+
+/* Login link */
+.login-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.login-text a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.login-text a:hover {
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signup-container {
+    padding: 30px 20px;
+  }
+
+  .signup-container h2 {
+    font-size: 20px;
+  }
+}
