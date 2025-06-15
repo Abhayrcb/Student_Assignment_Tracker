@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link,useNavigate } from 'react-router-dom';
-import '../stylesheets/SignupPage.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../services/firebase'; // Adjust the path as per your project structure
 import {  setDoc, doc } from 'firebase/firestore';
-;
+import '../stylesheets/SignupPage.css';
+
 
 function SignupPage() {
   const navigate = useNavigate();

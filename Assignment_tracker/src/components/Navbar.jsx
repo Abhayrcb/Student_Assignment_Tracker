@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 function Navbar() {
   return (
     <>
-     <header class="header">
+    <header class="header">
     <div class="logo">Assigment Tracker</div>
     <nav class="nav">
       <Link to="/">Home</Link>

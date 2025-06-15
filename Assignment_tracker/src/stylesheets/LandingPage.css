@@ -12,20 +12,60 @@ body {
   color: white;
 }
 
-.main-container{
-  position: relative;
-  width: 100vw;
-  min-height: 100vh;
-  height: auto;
+/* Sticky Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1a1a1a;
 }
 
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a,
+.nav button {
+  padding: 0.6rem 1.2rem;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav button {
+  background-color: white;
+  color: black;
+}
+
+.nav a:hover,
+.nav button:hover {
+  background-color: #333;
+}
 
 /* Main Container */
-.dashboard-container {
-  position: absolute;
+/* .dashboard-container {
   width: 100%;
   padding: 2rem;
-}
+} */
 
 /* Main Content */
 main {

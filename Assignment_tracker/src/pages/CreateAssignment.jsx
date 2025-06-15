@@ -4,6 +4,7 @@ import { db, auth } from "../services/firebase";
 import { useNavigate } from 'react-router';
 import { Timestamp } from "firebase/firestore";
 
+
 function CreateAssignment() {
   const navigate = useNavigate();
   const Assignment = async (e) => {
@@ -50,7 +51,12 @@ function CreateAssignment() {
         <input type="text" name='subject' placeholder='Enter the subject name' />
         <input type="text" name='description' placeholder='Enter the Description' />
         <input type="date" name="date" placeholder="Enter The Due Date" />
-        <input type="text" name='class' placeholder='Enter the class' />
+        <select name="class">
+          <option value="bca">BCA</option>
+          <option value="bca">BBA</option>
+          <option value="bca">BMLT</option>
+          <option value="bca">BHM</option>
+        </select>
         <select name="submission">
           <option value="pdf">PDF format</option>
           <option value="image">Image format</option>

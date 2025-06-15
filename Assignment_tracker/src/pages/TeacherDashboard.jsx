@@ -84,7 +84,16 @@ const [uid,setUid] = useState(null)
   return (
   <>
   <div className="main-container">
-  <Navbar/>
+    <header class="header">
+    <div class="logo">Assigment Tracker</div>
+    <nav class="nav">
+      <Link to="/">Home</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/student-dashboard">Student Dashboard</Link>
+      <Link to="/teacher-dashboard">Teacher-dashboard</Link>
+      <Link to="/signup">Register</Link>
+    </nav>
+  </header>
   <div className='Profile-container'>
         <div className="left">
            <div className="image">
@@ -103,7 +112,7 @@ const [uid,setUid] = useState(null)
                    <option value="student">Student</option>
                    <option value="Teacher">Teacher</option>
                 </select>
-                 <input type="text" name="class" required placeholder='Enter the class'/>
+                 <input type="text" name="class" placeholder='Enter the class'/>
                  <input type="submit" value="Update"/>
               </form>
            </div>
@@ -130,14 +139,13 @@ const [uid,setUid] = useState(null)
               <p>{assignment.description}</p>
               <p><strong>Subject:</strong> {assignment.subject}</p>
               <p><strong>Due:</strong> {assignment.dueDate}</p>
+              <Link to={`/submission-details/${assignment.uid}`}>View Sunmission Details</Link>
             </li>
           ))}
         </ul>
       )}
     </div>
       
-
-
     </div>
   </>
   )

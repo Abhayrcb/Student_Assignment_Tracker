@@ -10,6 +10,7 @@ import CreateAssignment from './pages/CreateAssignment';
 import TeacherDashboard from './pages/TeacherDashboard';
 import StudentDashboard from './pages/StudentDashboard';
 import SubmissionPage from './pages/SubmissionPage';
+import SubmissionDetails from './pages/SubmissionDetails';
 
 
 
@@ -26,7 +27,8 @@ function App() {
             <Route path="/create-assignment" element={<CreateAssignment />} />
             <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
             <Route path="/student-dashboard" element={<StudentDashboard />} />
-            <Route path="/Submission" element={<SubmissionPage/>}/>
+            <Route path="/submission" element={<SubmissionPage/>}/>
+            <Route path="/submission-details/:assignmentId" element={<SubmissionDetails/>}/>
         </Routes>
     </>
   )

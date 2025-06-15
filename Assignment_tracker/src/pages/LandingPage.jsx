@@ -1,6 +1,7 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 import '../stylesheets/LandingPage.css'
-import Navbar from '../components/Navbar';
+
 
 
 function LandingPage() {

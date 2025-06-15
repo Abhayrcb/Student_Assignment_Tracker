@@ -1,208 +1,201 @@
-/* .dashboard-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 32px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-}
-
-.dashboard-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #2d3748;
-}
-
-.dashboard-logout {
-  background: #e53e3e;
-  color: #fff;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s;
-}
-.dashboard-logout:hover {
-  background: #c53030;
-}
-
-.dashboard-section {
-  margin-bottom: 28px;
-}
-
-.section-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #4a5568;
-  margin-bottom: 12px;
-}
-
-.dashboard-list {
-  list-style: none;
-  padding: 0;
+/* Base styles */
+body, html {
   margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.dashboard-list li {
-  background: #f7fafc;
-  margin-bottom: 10px;
-  padding: 14px 18px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-  font-size: 1rem;
-  color: #2d3748;
-} */
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  padding: 80px 1rem 2rem 1rem;
+}
 
-
-/* Main container */
-
-
-/* Profile section */
 .Profile-container {
+  margin-top: 50px;
+  position: relative;
   width: 70%;
   display: flex;
-  margin-top: 50px;
+  margin-top: 100px;
   margin: auto;
   gap: 32px;
   margin-bottom: 40px;
+  background-color: red;
+}
+
+.left, .right {
+  flex: 1 1 300px;
+  min-width: 250px;
 }
 
 .left {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #222;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
 }
 
-.left .image {
-  width: 120px;
-  height: 120px;
-  background: #f0f0f0;
+.left .image img {
+  width: 100px;
+  height: 100px;
+  background: #333;
   border-radius: 50%;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.left img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid #fff;
 }
 
-.left button {
-  margin-bottom: 16px;
-  padding: 8px 20px;
-  background: #1976d2;
-  color: #fff;
+.left button, .left a {
+  background: #fff;
+  color: #111;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
 }
 
-.left button:hover {
-  background: #125ea8;
+.left button:hover, .left a:hover {
+  background: #111;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 #edit-page {
-  margin-top: 12px;
+  margin-top: 1rem;
   width: 100%;
 }
 
-#edit-page input,
-#edit-page select {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+#edit-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+#edit-page input, #edit-page select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #181818;
+  color: #fff;
+  font-size: 1rem;
 }
 
 #edit-page input[type="submit"] {
-  background: #388e3c;
-  color: #fff;
+  background: #fff;
+  color: #111;
+  font-weight: bold;
   border: none;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 #edit-page input[type="submit"]:hover {
-  background: #256029;
+  background: #111;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .right {
-  flex: 2;
-  padding: 16px 0;
+  
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .right p {
+  padding-left: 10px;
+  margin: 0.5rem 0;
   font-size: 1.1rem;
-  margin: 10px 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.3rem;
 }
 
-/* Assignments section */
-.assignment-history{
-  width: 60%;
-  margin-top: 32px;
- 
-  border-radius: 8px;
-  padding: 24px;
-  margin: auto;
+.assignment-history {
+  background: #181818;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-.assignment-list h2 {
-  margin-bottom: 18px;
-  color: #1976d2;
+.assignment-history h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5rem;
 }
 
-.assignment-list ul {
+.assignment-history ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.assignment-item {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 7px;
-  padding: 18px 16px;
-  margin-bottom: 18px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+.assignment-history li {
+  background: #222;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  transition: background 0.2s, border 0.2s;
 }
 
-.assignment-item h3 {
-  margin: 0 0 8px 0;
-  color: #333;
+.assignment-history li:hover {
+  background: #333;
+  border: 1px solid #fff;
 }
 
-.assignment-item p {
-  margin: 4px 0;
-  color: #444;
+.assignment-history a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-@media (max-width: 700px) {
+.assignment-history a:hover {
+  color: #bbb;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
   .Profile-container {
     flex-direction: column;
-    gap: 18px;
+    gap: 1rem;
+    padding: 1rem;
   }
+  .left, .right {
+    min-width: unset;
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  .assignment-history {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
   .main-container {
-    padding: 16px 6px;
+    padding: 1rem 0.2rem;
   }
-  .assignment-list {
-    padding: 14px;
+  .Profile-container {
+    padding: 0.5rem;
+  }
+  .assignment-history {
+    padding: 0.5rem 0.2rem;
   }
 }
