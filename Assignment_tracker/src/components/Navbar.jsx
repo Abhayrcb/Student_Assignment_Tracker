@@ -6,12 +6,12 @@ function Navbar() {
   return (
     <>
      <header class="header">
-    <div class="logo">SAT</div>
+    <div class="logo">Assigment Tracker</div>
     <nav class="nav">
-      <Link to="#">Home</Link>
-      <Link to="/t-dashboard">Student Dashboard</Link>
-      <Link to="/profile-page">Student Dashboard</Link>
+      <Link to="/">Home</Link>
       <Link to="/login">Login</Link>
+      <Link to="/student-dashboard">Student Dashboard</Link>
+      <Link to="/teacher-dashboard">Teacher-dashboard</Link>
       <Link to="/signup">Register</Link>
     </nav>
   </header>

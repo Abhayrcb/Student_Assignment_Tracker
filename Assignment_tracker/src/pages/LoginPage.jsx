@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { auth } from '../services/firebase'; // Adjust the path as per your project structure 
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
@@ -18,20 +18,24 @@ function LoginPage() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const uid = userCredential.user.uid;
-      alert(uid)
       const userDocRef = doc(db, "users", uid);
       
       const userSnap = await getDoc(userDocRef);
-      console.log(userSnap);
       if (userSnap.exists()) {
+
+
         const userData = userSnap.data();
         const role = userData.role;
-        
+
         if (role === "student") {
-          navigate("/s-dashboard");
-        } else if (role === "teacher") {
-          navigate("/t-dashboard");
-        } else {
+          navigate("/student-dashboard");
+        } 
+        
+        else if (role === "teacher") {
+          navigate("/teacher-dashboard");
+        } 
+        
+        else {
           alert("please tick the right role");
         }
       } else {
@@ -42,7 +46,7 @@ function LoginPage() {
       console.error("Login failed:", error);
       e.target.email.value = '';
       e.target.password.value = '';
-      navigate('/login');
+      navigate('/login',);
     }
   }
 
